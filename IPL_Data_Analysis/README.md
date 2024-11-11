@@ -14,11 +14,11 @@ This is the complete data of the IPL till 2017 (inclusive) and contains 5 follow
 
 Dataset Link: https://data.world/mkhuzaima/ipl-data-till-2017
 ## Steps:
-✔. Downloaded dataset from the above link and uploaded to amazon s3 bucket to replicate real world scenario.
-2. Used Databricks platform to efficiently write pySpark code without worrying about compute resources. Connected my s3 bucket to databricks notebook to use all the dataset files.
-3. Explored all the available tables, cleaned it, and transformed them according to our requirements to make them more sensible. This makes it easier to fetch insights without worrying about any anomaly in the data.
-4. Converted all the transformed datasets into sql table to query efficiently.
-5. Performed queries and plotted graph to draw insights.
+✔ Downloaded dataset from the above link and uploaded to amazon s3 bucket to replicate real world scenario.  
+✔ Used Databricks platform to efficiently write pySpark code without worrying about compute resources. Connected my s3 bucket to databricks notebook to use all the dataset files.  
+✔ Explored all the available tables, cleaned it, and transformed them according to our requirements to make them more sensible. This makes it easier to fetch insights without worrying about any anomaly in the data.  
+✔ Converted all the transformed datasets into sql table to query efficiently.  
+✔ Performed queries and plotted graph to draw insights.
 
 ### Queries performed to get answers for the following questions:     
 |Query|Description|
