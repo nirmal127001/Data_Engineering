@@ -20,7 +20,7 @@ Dataset Link: https://data.world/mkhuzaima/ipl-data-till-2017
 4. Converted all the transformed datasets into sql table to query efficiently.
 5. Performed queries and plotted graph to draw insights.
 
-### Queries performed to get answers for the following questions   
+### Queries performed to get answers for the following questions:     
 |Query|Description|
 |-----|-----------|
 |Q1|Top scoring batsman per season.|
