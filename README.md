@@ -1,7 +1,8 @@
 # IPL Data Analysis (apache-spark-project)
 
 ## Description
-#### This project is based on apache spark.
+This project is based on apache spark.
+In this project, we harness the power of Apache Spark to perform comprehensive analysis on Indian Premier League (IPL) data. By leveraging Spark's robust capabilities in handling large datasets and performing parallel computations, we aim to uncover meaningful insights and patterns in IPL matches over multiple seasons.
 
 ## Dataset preview
 This is the complete data of the IPL till 2017 (inclusive) and contains 5 following csv files.  
