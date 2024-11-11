@@ -21,7 +21,7 @@ Dataset Link: https://data.world/mkhuzaima/ipl-data-till-2017
 5. Performed queries and plotted graph to draw insights.
 
 |Query|Description|
--------------------
+|-----|-----------|
 |Q1|Top scoring batsman per season.|
 |Q2|Impact of Winning Toss on Match Outcome.|
 |Q3|Scores by Venue.|
