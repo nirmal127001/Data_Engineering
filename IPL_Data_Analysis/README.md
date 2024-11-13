@@ -28,3 +28,10 @@ Dataset Link: https://data.world/mkhuzaima/ipl-data-till-2017
 |Q3|Scores by Venue.|
 |Q4|Team Performance After Winning Toss.|
 |Q5|Number of Wins Per Team Per Season.|
+
+## Learnings
+✔ Python & PySpark  
+✔ SQL  
+✔ Apache Spark Basics and Databricks  
+✔ Writing transformation logic  
+✔ Visuallizing data for insights
