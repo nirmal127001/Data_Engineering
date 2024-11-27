@@ -40,9 +40,8 @@ Dataset Link: https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-i
 |Q4|Find the top countries with the highest number of gold medals.|
 
 ## Learnings
-✔ Python & PySpark  
-✔ SQL  
-✔ Apache Spark Basics and Databricks  
-✔ Writing transformation logic  
-✔ Visuallizing data for insights
+✅ Extract Data from APIs  
+✅ Azure Services - DataBricks, DataFactory, Azure Data Lake Storage and Synapse Analytics  
+✅ Writing Spark Code  
+✅ SQL queries for analysis
 
