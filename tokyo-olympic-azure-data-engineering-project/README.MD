@@ -5,7 +5,7 @@ My purpose in building this project is to gain hands-on experience in executing 
 In this project, we harness the power of Apache Spark to perform comprehensive analysis on Indian Premier League (IPL) data. By leveraging Spark's robust capabilities in handling large datasets and performing parallel computations, we aim to uncover meaningful insights and patterns in IPL matches over multiple seasons.
 
 ## Architecture
-
+![Alt text](Arcitecture.png)
 
 
 ## Dataset preview
