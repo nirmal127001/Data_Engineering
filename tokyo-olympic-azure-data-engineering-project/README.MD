@@ -20,25 +20,24 @@ The dataset contains 5 files as follows:
 
 Dataset Link: https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo  
 
-##Approach:  
-➡Downloaded dataset from source and uploaded extracted files into my gitub repository in csv format.  
-➡Create an azure storage account and created folders to store our data into ADLS. 
-➡Ingested raw data files from gitub(HTTP Server) to ADLS using Azure Data Factory.
-➡Created application in order to connect ADLS to Databricks using its credentials.
-➡Created _Azure Key Vault_ to store the sensitive credentials of the application created.
-➡Created Databricks workspace and mounted ADLS to access raw data using app's credentials stored in key vault.  
-➡Done few transormations and wrote the transformed files into separate folder back in ADLS. 
-➡Created an azure synapse analytics workspace and created database to store our transformed files as separate tables.  
+## Approach:  
+➡Downloaded dataset from source and uploaded extracted files into my gitub repository in csv format.    
+➡Create an azure storage account and created folders to store our data into ADLS.   
+➡Ingested raw data files from gitub(HTTP Server) to ADLS using Azure Data Factory.  
+➡Created application in order to connect ADLS to Databricks using its credentials.  
+➡Created _Azure Key Vault_ to store the sensitive credentials of the application created.  
+➡Created Databricks workspace and mounted ADLS to access raw data using app's credentials stored in key vault.    
+➡Done few transormations and wrote the transformed files into separate folder back in ADLS.   
+➡Created an azure synapse analytics workspace and created database to store our transformed files as separate tables.    
 ➡Done some analysis using serverless SQL pool.
 
-### Queries performed to get answers for the following questions:     
+## Analysis:     
 |Query|Description|
 |-----|-----------|
 |Q1|Calculate the total number of medals won by each country.|
 |Q2|Count the number of total athletes from each country.|
-|Q3|Calculaate av number of entries by gender for each discipline.|
-|Q4|Team Performance After Winning Toss.|
-|Q5|Number of Wins Per Team Per Season.|
+|Q3|Calculaate average number of entries by gender for each discipline.|
+|Q4|Find the top countries with the highest number of gold medals.|
 
 ## Learnings
 ✔ Python & PySpark  
