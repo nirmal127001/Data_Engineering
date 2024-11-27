@@ -19,14 +19,14 @@ The dataset contains 5 files as follows:
 5. Teams.xlsx (Details about the Teams, discipline, Name of Country and the event)  
 
 Dataset Link: https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo
-## Steps:
-➡ Downloaded dataset from the above link and uploaded to amazon s3 bucket to replicate real world scenario.  
-➡ Used Databricks platform to efficiently write pySpark code without worrying about compute resources. Connected my s3 bucket to databricks notebook to use all 
-   the dataset files.  
-➡ Explored all the available tables, cleaned it, and transformed them according to our requirements to make them more sensible. This makes it easier to fetch 
-   insights without worrying about any anomaly in the data.  
-➡ Converted all the transformed datasets into sql table to query efficiently.  
-➡ Performed queries and plotted graph to draw insights.
+##Approach:  
+➡Downloaded dataset from source and uploaded extracted files into my gitub repository in csv format.  
+➡Create an azure storage account and created folders to store our data into ADLS. 
+➡Ingested raw data files from gitub(HTTP Server) to ADLS using Azure Data Factory. 
+➡Create an azure synapse analytics workspace.  
+➡Create a SQL pool in azure synapse workspace.  
+➡Create table structure in SQL pool.  
+➡Create a data pipeline to ingest data from azure storage into SQL pool tables.  
 
 ### Queries performed to get answers for the following questions:     
 |Query|Description|
