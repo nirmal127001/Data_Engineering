@@ -20,18 +20,18 @@ The dataset contains 5 files as follows:
 
 Dataset Link: https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo  
 
-## Approach:  
+## Approach    
 ➡Downloaded dataset from source and uploaded extracted files into my gitub repository in csv format.    
-➡Create an **azure storage account** and created folders to store our data into ADLS.   
+➡Create an Azure Storage Account and created folders to store our data into **Azure Data Lake Storage(ADLS)**.   
 ➡Ingested raw data files from gitub(HTTP Server) to ADLS using **Azure Data Factory**.  
 ➡Created application in order to connect ADLS to Databricks using its credentials.  
 ➡Created **Azure Key Vault** to store the sensitive credentials of the application created.  
 ➡Created **Databricks** workspace and mounted ADLS to access raw data using app's credentials stored in key vault.    
 ➡Done few transormations and wrote the transformed files into separate folder back in ADLS.   
-➡Created an **azure synapse analytics** workspace and created database to store our transformed files as separate tables.    
+➡Created an **Azure Synapse Analytics** workspace and created database to store our transformed files as separate tables.    
 ➡Done some analysis using serverless SQL pool.
 
-## Analysis:     
+## Analysis     
 |Query|Description|
 |-----|-----------|
 |Q1|Calculate the total number of medals won by each country.|
