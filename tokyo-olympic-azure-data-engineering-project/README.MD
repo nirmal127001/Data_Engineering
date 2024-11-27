@@ -9,8 +9,9 @@ In this Microsoft Azure Data Engineering Project, I learned learn how to build a
 ![Alt text](Arcitecture.png)
 
 
-## Dataset preview
-This is the complete data of the 2021-olympics-in-tokyo and contains 5 following excel files:    
+## Dataset preview  
+For this project, I will be working with the 2021 Olympics dataset. This includes the information on more than 11,000 athletes competing in 47 sports for 743 Teams in the Tokyo Olympics in 2021. This dataset includes information on the participating Teams, Athletes, Coaches, and Entries by gender. It includes their names, nationalities, sports they compete in, and name of coaches.  
+The dataset contains 5 files as follows:    
 1. Athletes.xlsx (Details about Athletes)      
 2. Coaches.xlsx (Details about coaches, countries and disciplines along with event)  
 3. EntriesGender.xlsx (Details about the Discipline and the number of females and males participating)  
