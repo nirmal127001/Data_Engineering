@@ -1,8 +1,9 @@
 # Tokyo-Olympic (Project on Azure Cloud)
 
 ## Description
+Building Data Pipelines in Azure with Azure Synapse Analytics.  
 My purpose in building this project is to gain hands-on experience in executing a data engineering project using Azure cloud services.
-In this project, we harness the power of Apache Spark to perform comprehensive analysis on Indian Premier League (IPL) data. By leveraging Spark's robust capabilities in handling large datasets and performing parallel computations, we aim to uncover meaningful insights and patterns in IPL matches over multiple seasons.
+In this Microsoft Azure Data Engineering Project, I learned learn how to build a data pipeline using Azure Synapse Analytics, Azure Storage and Azure Synapse SQL pool to perform data analysis on the 2021 Olympics dataset.
 
 ## Architecture
 ![Alt text](Arcitecture.png)
@@ -10,11 +11,11 @@ In this project, we harness the power of Apache Spark to perform comprehensive a
 
 ## Dataset preview
 This is the complete data of the 2021-olympics-in-tokyo and contains 5 following excel files:    
-1. Athletes.xlsx  
-2. Coaches.xlsx  
-3. EntriesGender.xlsx  
-4. Medals.xlsx  
-5. Teams.xlsx  
+1. Athletes.xlsx (Details about Athletes)      
+2. Coaches.xlsx (Details about coaches, countries and disciplines along with event)  
+3. EntriesGender.xlsx (Details about the Discipline and the number of females and males participating)  
+4. Medals.xlsx (Contains the Medals and Scoreboard of countries that participated in Olympics)    
+5. Teams.xlsx (Details about the Teams, discipline, Name of Country and the event)  
 
 Dataset Link: https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo
 ## Steps:
