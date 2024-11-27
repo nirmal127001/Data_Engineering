@@ -4,6 +4,10 @@
 My purpose in building this project is to gain hands-on experience in executing a data engineering project using Azure cloud services.
 In this project, we harness the power of Apache Spark to perform comprehensive analysis on Indian Premier League (IPL) data. By leveraging Spark's robust capabilities in handling large datasets and performing parallel computations, we aim to uncover meaningful insights and patterns in IPL matches over multiple seasons.
 
+## Architecture
+
+
+
 ## Dataset preview
 This is the complete data of the IPL till 2017 (inclusive) and contains 5 following csv files.  
 1. Ball_By_Ball.csv
