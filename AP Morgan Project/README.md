@@ -18,7 +18,9 @@
 ➡Move all the passed files to the Staging folder.  
 ➡Write the passed files as a Delta table in Azure Databricks.  
 
-## Learnings
-✅ Extract data from S3 bucket.    
-✅ Azure Services - DataBricks, DataFactory, Azure Data Lake Storage, Key Vault, Azure SQL 
-✅ Writing Spark Code 
+## Azure Services Used:  
+✅ DataBricks    
+✅ DataFactory  
+✅ Azure Data Lake Storage   
+✅ Key Vault  
+✅ Azure SQL  
