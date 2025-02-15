@@ -1,7 +1,11 @@
 # Connected Vehicle (Project on Azure Cloud)
 ## Description  
-This project processes CSV files using Azure Data Lake Storage, Databricks, and Azure SQL Server. Files are ingested into the Landing folder, then validated in Databricks using schema rules stored in Azure SQL Server. Valid files are moved to the Staging folder, while rejected files (due to duplicates or incorrect formats) are sent to the Rejected folder. Secure authentication is managed via Azure Key Vault. This ensures data quality and efficient processing before storing in Delta Tables. 🚀
+The **Connected Vehicle Project** processes real-time vehicle tracking data from JSON files stored in an **AWS S3 Bucket**. The data is ingested using **Azure Data Factory (ADF)** and stored in the **Landing folder** in Azure Data Lake Storage. An **Azure Function** validates the data based on schema rules.  
 
+- **Valid data** is moved to the **Staging folder** and later loaded into an **Azure SQL Database** via ADF for analysis.  
+- **Invalid data** is sent to the **Rejected folder** for further review.  
+
+This architecture ensures efficient data ingestion, validation, and storage for connected vehicle analytics. 🚀  
 
 ## Architecture
 ![Alt text](Architecture.png)
@@ -41,12 +45,12 @@ JSON Data Structure:
 
 
 ## Azure Services Used: 
-✅ Azure Data Lake Storage Gen 2
+✅ Azure Data Lake Storage Gen 2  
 ✅ Azure Data Factory  
-✅ Data Factory Pipeline
-✅ Azure Functions
-✅ Azure Key Vault  
-✅ AWS S3 Bucket    
+✅ Data Factory Pipeline  
+✅ Azure Functions  
+✅ Azure Key Vault   
+✅ AWS S3 Bucket     
 ✅ Connect S3 to Azure Cloud  
 ✅ Triggers   
 ✅ Store secretes in Key Vault and access them 
