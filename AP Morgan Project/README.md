@@ -20,16 +20,30 @@ Table Structure:
 | **CreateDate** | Date | Date when the product was first created. |
 | **ModifiedDate** | Date | Date when the product details were last updated. |
 
-## Approach  
-- Internal Application sends CSV file in Azure Data Lake Storage.  
-- Validation needed to apply on this follows:  
-   - Check for duplicate rows. If it contains duplicate rows, file needs to be rejected.  
-   - Need to validate the date format for all the date fields. Date column names and desired date format is stored in an Azure SQL Server. If validation fails, file        will be rejected.  
-- Move all the rejected files to the Reject folder.  
-- Move all the passed files to the Staging folder.  
-- Write the passed files as a Delta table in Azure Databricks.  
 
-## Azure Services Used:  
+## Approach  
+
+1. **Data Ingestion:**  
+   - CSV files are received and stored in the Azure Data Lake Storage **Landing folder**.  
+   
+2. **Data Processing via Pipeline:**  
+   - An **ADF pipeline** picks up the files and sends them for validation.  
+
+3. **Validation Process:**
+   - Check for duplicate rows. If it contains duplicate rows, file needs to be rejected. 
+   - Validation is performed using predefined **schema rules** stored in an **SQL database**.  
+   - Secure **credentials** from Azure Key Vault are used for authentication.  
+
+5. **Data Classification:**  
+   - **Valid files** are moved to the **Staging folder** for further processing.  
+   - **Invalid files** are moved to the **Rejected folder** for review and troubleshooting.
+
+6. **Sink**
+   - Write the passed files from **Staging folder** as a Delta table in Azure Databricks.
+ 
+
+## Azure Services Used: 
+✅ Azure Data Lake Storage  
 ✅ Azure Data Factory  
 ✅ Data Factory Pipeline  
 ✅ Azure Key Vault  
