@@ -6,41 +6,47 @@ This project processes CSV files using Azure Data Lake Storage, Databricks, and 
 ## Architecture
 ![Alt text](Architecture.png)
 
-## Data Table preview  
-The Product Table contains details about various products, including pricing, unique identifiers, and important timestamps.  
+## Raw Data Information (Vehicle Data)  
+This project processes vehicle tracking data in JSON format. The data includes details such as Vehicle ID, latitude, longitude, city, temperature, and speed. The raw data is stored in Azure Data Lake Storage, and is further processed using Azure Data Factory and Azure Databricks.  
 
-Table Structure:
+JSON Data Structure:
 | Column Name   | Data Type  | Description |
 |--------------|-----------|-------------|
-| **ProductId**  | String | Unique identifier for the product. |
-| **Price**      | Integer | Price of the product. |
-| **guid**       | UUID | Globally unique identifier for the product. |
-| **StartDate**  | Date | Date when the product becomes active. |
-| **EndDate**    | Date | Date when the product is no longer available. |
-| **CreateDate** | Date | Date when the product was first created. |
-| **ModifiedDate** | Date | Date when the product details were last updated. |
+| **VehicleID**  | String | Unique identifier for the vehicle. |
+| **Latitude**   | Float  | Geographical latitude of the vehicle. |
+| **Longitude**  | Float  | Geographical longitude of the vehicle. |
+| **City**       | String | City where the vehicle is located. |
+| **Temperature** | Integer | Recorded temperature at the vehicle's location (°F). |
+| **Speed**      | Integer | Speed of the vehicle (km/h). |
 
-## Approach  
-- Internal Application sends CSV file in Azure Data Lake Storage.  
-- Validation needed to apply on this follows:  
-   - Check for duplicate rows. If it contains duplicate rows, file needs to be rejected.  
-   - Need to validate the date format for all the date fields. Date column names and desired date format is stored in an Azure SQL Server. If validation fails, file        will be rejected.  
-- Move all the rejected files to the Reject folder.  
-- Move all the passed files to the Staging folder.  
-- Write the passed files as a Delta table in Azure Databricks.  
 
-## Azure Services Used:  
+## Approach for Connected Vehicle Project:   
+1. **Ingest JSON Data from S3 Bucket**  
+   - JSON files containing vehicle tracking data are stored in an **AWS S3 Bucket**.  
+   - **Azure Data Factory (ADF)** pulls these files into the **Landing folder** in Azure Data Lake Storage.  
+
+2. **Data Validation using Azure Function**  
+   - An **Azure Function** validates the ingested JSON data.  
+   - Validation checks include:  
+     - **Schema validation** (ensuring required fields exist).  
+     - **Data quality checks** (e.g., correct data types, no missing values).  
+
+3. **Processing and Staging**  
+   - Valid JSON files are moved to the **Staging folder** in Azure Data Lake Storage.  
+   - Invalid/rejected files are moved to the **Rejected folder** for further analysis.  
+
+4. **Loading into SQL Database**  
+   - Staged data is processed and transformed using **ADF pipelines**.  
+   - The cleaned and validated data is then loaded into an **Azure SQL Database** for further analysis and reporting.
+
+
+## Azure Services Used: 
+✅ Azure Data Lake Storage Gen 2
 ✅ Azure Data Factory  
-✅ Data Factory Pipeline  
+✅ Data Factory Pipeline
+✅ Azure Functions
 ✅ Azure Key Vault  
-✅ Azure SQL DB  
-✅ SSMS  
-✅ AWS S3 Bucket  
-✅ Connect ADF to Databricks  
-✅ Connect Databricks to SQL Server  
-✅ Connect Databricks to ADLS  
+✅ AWS S3 Bucket    
 ✅ Connect S3 to Azure Cloud  
-✅ Triggers  
-✅ SAS token  
-✅ Create Secrets scope in Databricks  
-✅ Store secretes in Key Vault and access them  
+✅ Triggers   
+✅ Store secretes in Key Vault and access them 
