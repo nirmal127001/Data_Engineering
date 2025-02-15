@@ -6,7 +6,7 @@ Each Directory contains a fully implemented & well documented project with a det
 insights from complex datasets.
 
 ## Projects
-* IPL Data Analysis (Spark project)
-* Tokyo-Olympic Data Engineering Project on Azure
-* Youtube Analysis Project
-* Ap Morgan Project
+* AP Morgan Project: Focuses on processing CSV files using Azure Data Lake Storage, Databricks, and Azure SQL Server. It includes data validation, handling duplicates, and storing validated data in Delta Tables.  
+* IPL Data Analysis: Utilizes Spark to analyze IPL cricket data, extracting insights and performing data transformations.  
+* Tokyo-Olympic Data Engineering Project on Azure: Implements data engineering workflows on Azure, processing and analyzing Tokyo Olympic data using services like Azure Data Factory and Azure Synapse.  
+* YouTube Analysis Project: Analyzes YouTube data to extract trends and insights, employing data pipelines and visualization techniques.  
