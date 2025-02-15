@@ -9,3 +9,4 @@ insights from complex datasets.
 * IPL Data Analysis (Spark project)
 * Tokyo-Olympic Data Engineering Project on Azure
 * Youtube Analysis Project
+* Ap Morgan Project
