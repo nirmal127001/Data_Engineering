@@ -4,6 +4,7 @@ Each Directory contains a fully implemented & well documented project with a det
 These projects demonstrate real-world data engineering skills, covering data ingestion, transformation, validation, and storage using industry-standard tools.
 
 ## Projects
+* **PySpark on Databricks** : The purpose of this project was to get hands-on experience with Databricks by performing data cleaning, transformation, aggregation, and analysis using real-world sales and store datasets.
 * **AP Morgan Project**: Focuses on processing CSV files using Azure Data Lake Storage, Databricks, and Azure SQL Server. It includes data validation, handling duplicates, and storing validated data in Delta Tables.
   
 * **Connected Vehicle Project**: Processes vehicle tracking data in JSON format using Azure Data Lake Storage, Databricks, and Azure SQL Server. Data is validated and stored in Delta Tables after processing.
