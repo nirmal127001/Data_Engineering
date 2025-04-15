@@ -1,4 +1,3 @@
-%md
 ## Project Description
 **Objective**:  
 - Clean and prepare sales and store data
